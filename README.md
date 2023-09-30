@@ -11,7 +11,7 @@ As you can see there are three folders in this repo:
 
 The rest of the files at the project's root are for putting everything together.  The centerpiece is the [docker-compose](https://docs.docker.com/compose/gettingstarted/) file (in both a development and production version).
 
-Our application has two "services" in docker-compose lingo.  A service is basically a container.  I've somewhat arbitrarily called the DRF container "api", and the React/nginx one "nginx".  The `build` key (and its sub-keys) just tell docker-compose where the Dockerfile is.  So in the case of `docker-compose.dev.yml`, the Dockerfile for "api" is in the `/backend` folder.  It's smart enough to find the Dockerfile in there.  Everything else is optional configuration.  docker-compose uses that configuration to run your image.
+Our application has three "services" in docker-compose lingo.  A service is basically a container.  I've somewhat arbitrarily called the DRF container "api", and the React/nginx one "nginx".  The `build` key (and its sub-keys) just tell docker-compose where the Dockerfile is.  So in the case of `docker-compose.dev.yml`, the Dockerfile for "api" is in the `/backend` folder.  It's smart enough to find the Dockerfile in there.  Everything else is optional configuration.  docker-compose uses that configuration to run your image.
 
 ```yaml
   api:
