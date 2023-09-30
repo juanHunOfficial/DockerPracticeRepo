@@ -7,8 +7,6 @@ version: "3"
 services:
   api:
     image: chadmowbray/backend-prod:$NEW_VERSION 
-    ports:
-      - "8000:8000"
     environment:
       - SECRET_KEY=$SECRET_KEY
       - DEBUG=$DEBUG

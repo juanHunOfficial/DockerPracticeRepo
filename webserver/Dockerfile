@@ -1,10 +1,7 @@
 ###########################
 # This is a "builder" pattern in Docker.
-# We need to process our React code into
-# static files that we can serve (npm run build).
-# You could also skip this part and just run 
-# "npm run build" and copy over the output manually
-# like some kind of barbarian
+# We need to process our React code into static files that we can serve (npm run build).
+# You could also skip this part and just run "npm run build" and copy over the output manually like some kind of barbarian
 ###########################
 
 FROM node:lts-alpine as builder

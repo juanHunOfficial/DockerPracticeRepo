@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Install docker and docker compose
 sudo yum install docker -y && \
 sudo service docker start && \
 sudo usermod -aG docker $USER  && \
