@@ -52,11 +52,7 @@ Ensure that you've run `build-and-push-images.sh <MY_EC2_IP_ADDR> <VERSION>`
 
 You'll need to install docker and docker-compose.  The `setup-ec2.sh` script takes care of that.  Before you can run it, you'll have to copy it over, replacing your .pem file and IP address as necessary:
 ```bash
-scp  -i "fullstack.pem" ./setup-ec2.sh ec2-user@ec2-52-91-211-160.compute-1.amazonaws.com:/home/ec2-user
-```
-Then you will copy over the `run-compose-prod.sh` and `docker-compose.prod.yml` files:
-```bash
-scp  -i "fullstack.pem" ./run-compose-prod.sh ./docker-compose.prod.yml ec2-user@ec2-52-91-211-160.compute-1.amazonaws.com:/home/ec2-user
+scp  -i "vanillaApp.pem" ./setup-ec2.sh ./run-compose-prod.sh ./docker-compose.prod.yml   ec2-user@ec2-18-234-99-58.compute-1.amazonaws.com:/home/ec2-user
 ```
 
 Now you can run the Docker installation script: `./setup-ec2.sh`, and then the `run-compose-prod.sh` script with appropriate arguments.
