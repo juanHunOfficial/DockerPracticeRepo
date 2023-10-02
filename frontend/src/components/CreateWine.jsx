@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from "react-router-dom"
+import "./CreateWine.css"
 
 
 function CreateWine() {
@@ -51,15 +52,25 @@ function CreateWine() {
     <>
       <h2>Create Wine</h2>
       {errors && <h4>{JSON.stringify(errors)}</h4>}
-      <label htmlFor="wineName">Wine Name:</label>
-      <input value={wineName} name="wineName" onChange={handleWineNameChange}></input>
-      <label htmlFor="winePrice">Wine Price:</label>
-      <input value={price} name="winePrice" onChange={handleWinePriceChange}></input>
-      <label htmlFor="wineVarietal">Wine Varietal:</label>
-      <input value={varietal} name="wineVarietal" onChange={handleWineVarietalChange}></input>
-      <label htmlFor="wineDescription">Wine Description:</label>
-      <input value={description} name="wineDescription" onChange={handleWineDescriptionChange}></input>
-      <button onClick={handleSubmit}>Submit</button>
+      <div>
+        <label htmlFor="wineName">Wine Name:</label>
+        <input value={wineName} name="wineName" onChange={handleWineNameChange}></input>
+      </div>
+      <div>
+        <label htmlFor="winePrice">Wine Price:</label>
+        <input value={price} name="winePrice" onChange={handleWinePriceChange}></input>
+      </div>
+      <div>
+        <label htmlFor="wineVarietal">Wine Varietal:</label>
+        <input value={varietal} name="wineVarietal" onChange={handleWineVarietalChange}></input>
+      </div>
+      <div>
+        <label htmlFor="wineDescription">Wine Description:</label>
+        <input value={description} name="wineDescription" onChange={handleWineDescriptionChange}></input>
+      </div>
+      <div>
+        <button onClick={handleSubmit}>Submit</button>
+      </div>
     </>
   )}
 
