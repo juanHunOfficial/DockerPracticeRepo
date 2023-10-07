@@ -28,7 +28,7 @@ Our application has three "services" in docker-compose lingo.  A service is basi
 is the same as
 
 ```bash
-docker run -p 8000:8000 -e SECRET_KEY=$SECRET_KEY -e DEBUG=$DEBUG -e DB_NAME=$POSTGRES_DB -eDB_USER=$POSTGRES_USER -e DB_PASS=$POSTGRES_PASSWORD ./backend
+docker run -p 8000:8000 -e SECRET_KEY=$SECRET_KEY -e DEBUG=$DEBUG -e DB_NAME=$POSTGRES_DB -e DB_USER=$POSTGRES_USER -e DB_PASS=$POSTGRES_PASSWORD ./backend
 ```
 
 The `docker-compose.prod.yml` is almost identical, except that it uses pre-built images stored in a Dockerhub account (so that we don't have to copy over all the source code into the EC2 instance).
