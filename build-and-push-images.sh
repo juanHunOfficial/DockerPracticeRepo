@@ -10,10 +10,10 @@
 # instead of localhost
 ##############################
 
+DOCKERHUB_UNAME=chadmowbray
+
 BASE_URL=$1
 NEW_VERSION=$2
-
-DOCKERHUB_UNAME=chadmowbray
 
 docker buildx build --platform linux/amd64 --build-arg VITE_BASE_URL=$BASE_URL -t $DOCKERHUB_UNAME/webserver-prod:$NEW_VERSION -f webserver/Dockerfile . --no-cache
 docker push $DOCKERHUB_UNAME/webserver-prod:$NEW_VERSION

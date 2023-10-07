@@ -6,7 +6,7 @@
 version: "3"
 services:
   api:
-    image: chadmowbray/backend-prod:$NEW_VERSION 
+    image: $DOCKERHUB_UNAME/backend-prod:$NEW_VERSION 
     environment:
       - SECRET_KEY=$SECRET_KEY
       - DEBUG=$DEBUG
@@ -16,7 +16,7 @@ services:
     depends_on:
       - db
   nginx:
-    image: chadmowbray/webserver-prod:$NEW_VERSION
+    image: $DOCKERHUB_UNAME/webserver-prod:$NEW_VERSION
     restart: always
     ports:
       - "80:80"

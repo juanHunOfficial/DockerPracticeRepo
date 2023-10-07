@@ -36,9 +36,9 @@ The `docker-compose.prod.yml` is almost identical, except that it uses pre-built
 The other `.sh` scripts are conveniences for running the docker-compose files.
 NOTE: You might have to change the file permissions to run the scripts `chmod 755 myscript.sh`.
 
-`run-compose-dev.sh` sets two environment variables used in the docker-compose file, then calls `docker-compose -f docker-compose.dev.yml up`.  "up" starts everything (this might take a while).  And when you're done, you just run `docker-compose -f docker-compose.dev.yml down` (not part of a script, but you can add your own, or maybe a [Makefile](https://medium.com/freestoneinfotech/simplifying-docker-compose-operations-using-makefile-26d451456d63) if you really want to go all out).
+`run-compose-dev.sh` sets some environment variables used in the docker-compose file, then calls `docker-compose -f docker-compose.dev.yml up`.  "up" starts everything (this might take a while).  And when you're done, you just run `docker-compose -f docker-compose.dev.yml down` (not part of a script, but you can add your own, or maybe a [Makefile](https://medium.com/freestoneinfotech/simplifying-docker-compose-operations-using-makefile-26d451456d63) if you really want to go all out).
 
-Lastly, `build-and-push-images.sh` (which takes two arguments: your EC2 IP address, and the current version of your application, i.e. 1.2) is for pushing up your images to Dockerhub so they can be accessed for the production deployment.  Versioning your containers enables you to keep track of what you have deployed at any given time.
+Lastly, `build-and-push-images.sh` (which takes two arguments: your EC2 IP address, and the current version of your application, i.e. 1.2) is for pushing up your images to Dockerhub so they can be accessed for the production deployment.  Be sure to set the `DOCKERHUB_UNAME` variable to your own Dockerhub account. Versioning your containers enables you to keep track of what you have deployed at any given time.
 
 
 # Development

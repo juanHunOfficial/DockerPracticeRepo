@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# The Dockerhub account where the images are stored
+export DOCKERHUB_UNAME=chadmowbray
+
 # These environment variables come from command line arguments.
 # They are consumed by the docker-compose file.
 export SECRET_KEY=$1
